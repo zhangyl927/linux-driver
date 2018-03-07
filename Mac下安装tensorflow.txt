@@ -1,0 +1,15 @@
+1.安装pip
+$sudo easy_install pip
+$sudo easy_install --upgrade six
+
+2.安装TensorFlow
+$sudo pip install tensorflow    #python 2
+$sudo pip3 install tensorflow   #python 3
+
+
+在2过程中，若网络不稳定会安装失败报错，也有可能是由于Mac的SIP机制导致安装失败。后者解决方案如下：
+1.首先确认是否开启：终端输入csrutil status，若开启则为enabled，关闭则为disabled。此时为开启状态。
+2.重启电脑，按住command+R进入修复模式。
+3.实用工具--》终端，在终端输入csrutil disable。重启电脑。
+关闭SIP重启后安装成功。
+建议在安装完后开启SIP。操作：重复1~3操作，将csrutil disable 改为csrutil enable即可。
